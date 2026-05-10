@@ -12,6 +12,15 @@
     <meta name="author" content="CK Soluciones">
     <link rel="canonical" href="https://cksoluciones.com/">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFQ080GJN2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DFQ080GJN2');
+    </script>
+
     <!-- Open Graph -->
     <meta property="og:title" content="CK Soluciones | Automatización con AI y Agentes Inteligentes">
     <meta property="og:description" content="Automatizamos procesos empresariales con inteligencia artificial. Agentes AI, n8n, sistemas RAG y software a medida.">
@@ -878,6 +887,41 @@
     }, { threshold: 0.35 });
 
     sections.forEach(s => observer.observe(s));
+
+    // Scroll depth: 25%, 50%, 75% (mismo evento que Enhanced Measurement usa internamente)
+    var scrollFired = {};
+    window.addEventListener('scroll', function() {
+        var pct = Math.round(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+        [25, 50, 75].forEach(function(milestone) {
+            if (!scrollFired[milestone] && pct >= milestone) {
+                scrollFired[milestone] = true;
+                gtag('event', 'scroll', { percent_scrolled: milestone });
+            }
+        });
+    }, { passive: true });
+
+    // Conversiones: click en WhatsApp → generate_lead
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            gtag('event', 'generate_lead', {
+                event_category: 'CTA',
+                event_label: 'WhatsApp'
+            });
+        });
+    });
+
+    // Engagement: click en cada sección del nav
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var section = this.getAttribute('href').replace('#', '');
+            if (section) {
+                gtag('event', 'navigation_click', {
+                    event_category: 'Nav',
+                    event_label: section
+                });
+            }
+        });
+    });
 </script>
 
 </body>
