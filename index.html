@@ -888,25 +888,22 @@
 
     sections.forEach(s => observer.observe(s));
 
-    // Scroll depth: 25%, 50%, 75% (mismo evento que Enhanced Measurement usa internamente)
+    // Scroll depth: eventos con nombre propio → visibles directo en GA4 sin configuración
     var scrollFired = {};
     window.addEventListener('scroll', function() {
         var pct = Math.round(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
-        [25, 50, 75].forEach(function(milestone) {
-            if (!scrollFired[milestone] && pct >= milestone) {
-                scrollFired[milestone] = true;
-                gtag('event', 'scroll', { percent_scrolled: milestone });
+        [{milestone: 25, name: 'scroll_25'}, {milestone: 50, name: 'scroll_50'}, {milestone: 75, name: 'scroll_75'}].forEach(function(s) {
+            if (!scrollFired[s.milestone] && pct >= s.milestone) {
+                scrollFired[s.milestone] = true;
+                gtag('event', s.name);
             }
         });
     }, { passive: true });
 
-    // Conversiones: click en WhatsApp → generate_lead
+    // Conversiones: click en WhatsApp
     document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
         link.addEventListener('click', function() {
-            gtag('event', 'generate_lead', {
-                event_category: 'CTA',
-                event_label: 'WhatsApp'
-            });
+            gtag('event', 'whatsapp_click');
         });
     });
 
