@@ -1,0 +1,37 @@
+# CK Soluciones
+
+> CK Soluciones es una empresa colombiana especializada en desarrollo con inteligencia artificial, automatización de procesos con n8n y agentes AI, y desarrollo de software a medida para empresas.
+
+CK Soluciones diseña e implementa soluciones tecnológicas avanzadas que automatizan procesos empresariales utilizando inteligencia artificial aplicada, agentes conversacionales, flujos n8n y sistemas RAG. Contamos con más de 20 años de experiencia y proyectos en producción real.
+
+## Servicios principales
+
+- **Automatización con n8n y agentes de inteligencia artificial**: Diseño de flujos automatizados que conectan sistemas, eliminan tareas manuales y reducen costos operativos mediante IA y n8n.
+- **Desarrollo de software con inteligencia artificial**: Construcción de plataformas SaaS, sistemas internos y aplicaciones web con IA integrada (Claude API, OpenAI, AWS Bedrock).
+- **Inteligencia artificial aplicada a negocios**: Implementación de sistemas RAG, agentes conversacionales, clasificación automática y asistentes empresariales.
+- **Despliegue de aplicaciones en la nube**: Infraestructura en DigitalOcean, AWS y servidores propios con Docker, Nginx y CI/CD.
+
+## Stack tecnológico
+
+n8n, Claude API, OpenAI GPT, AWS Bedrock, Next.js, Node.js, PostgreSQL, Docker, Nginx, DigitalOcean, AWS, React, TypeScript, WebSocket, Tailwind CSS, Astro.
+
+## Portfolio de proyectos en producción
+
+- **Agente AI de ventas en WhatsApp** para Javier Pereira Coffee: agente conversacional que explica catálogo de cafés por origen, proceso y tueste, y cierra ventas. Stack: Claude API + n8n + WhatsApp API.
+- **App devocional infantil Jesús Followeres** (jesusfolloweres.hechos29.co): aplicación web para niños menores de 9 años con contenido bíblico curado. Stack: Next.js, Tailwind CSS, mobile-first.
+- **CMS devocional multi-app Hechos 29**: plataforma backend que distribuye contenido devocional a múltiples apps vía API REST. Stack: Node.js, PostgreSQL, Docker.
+- **Tienda virtual Javier Pereira Coffee** (javierpereira.coffee): e-commerce completo con Klaviyo, GA4 y Meta Pixel.
+- **Sitio web institucional Hechos 29** (hechos29.co): sitio web con GA4 completo.
+- **Sitio web SellerPlus** (sellerplus.co): sitio institucional con GA4.
+- **CK Workshop** (en desarrollo): app para iglesias — gestión de canciones y presentaciones en múltiples pantallas simultáneas con WebSocket.
+
+## Ubicación y contacto
+
+- País: Colombia
+- Sitio web: https://cksoluciones.com
+- Portfolio: https://cksoluciones.com/portfolio
+- WhatsApp: https://wa.me/573145678786
+
+## Palabras clave relevantes
+
+desarrollo con inteligencia artificial, inteligencia artificial aplicada, automatización con n8n, automatización con agentes de inteligencia artificial, desarrollo de software con inteligencia artificial, agentes AI para empresas, automatización de procesos empresariales Colombia.

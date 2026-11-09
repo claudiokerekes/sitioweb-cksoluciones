@@ -1,0 +1,502 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CK Soluciones",
+    "url": "https://cksoluciones.com",
+    "description": "Desarrollo con inteligencia artificial, automatización con n8n y agentes AI para empresas en Colombia.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://cksoluciones.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Navegación principal — CK Soluciones",
+    "itemListElement": [
+      { "@type": "SiteNavigationElement", "position": 1, "name": "Servicios de IA y Automatización", "url": "https://cksoluciones.com/#servicios" },
+      { "@type": "SiteNavigationElement", "position": 2, "name": "Casos de uso reales",             "url": "https://cksoluciones.com/#casos" },
+      { "@type": "SiteNavigationElement", "position": 3, "name": "Proceso de trabajo",              "url": "https://cksoluciones.com/#proceso" },
+      { "@type": "SiteNavigationElement", "position": 4, "name": "Stack tecnológico",               "url": "https://cksoluciones.com/#stack" },
+      { "@type": "SiteNavigationElement", "position": 5, "name": "Portfolio de proyectos",          "url": "https://cksoluciones.com/portfolio" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CK Soluciones",
+    "url": "https://cksoluciones.com",
+    "logo": "https://cksoluciones.com/og-image.png",
+    "description": "Empresa colombiana especializada en desarrollo con inteligencia artificial, automatización de procesos con n8n y agentes AI, y desarrollo de software a medida.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Colombia",
+      "sameAs": "https://www.wikidata.org/wiki/Q739"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO",
+      "addressRegion": "Colombia"
+    },
+    "knowsAbout": [
+      "Inteligencia Artificial aplicada a negocios",
+      "Automatización de procesos empresariales",
+      "Desarrollo con inteligencia artificial",
+      "Automatización con n8n",
+      "Agentes de inteligencia artificial",
+      "Desarrollo de software con inteligencia artificial",
+      "Claude API", "OpenAI", "AWS Bedrock", "Sistemas RAG",
+      "Docker", "CI/CD", "DigitalOcean", "AWS"
+    ],
+    "serviceType": [
+      "Desarrollo con inteligencia artificial",
+      "Automatización con n8n",
+      "Automatización con agentes de inteligencia artificial",
+      "Desarrollo de software con inteligencia artificial",
+      "Inteligencia artificial aplicada a negocios",
+      "Agentes AI para empresas",
+      "Automatización de procesos empresariales",
+      "Flujos n8n automatizados",
+      "Sistemas RAG",
+      "Software a medida",
+      "Desarrollo SaaS",
+      "Plataformas empresariales",
+      "Despliegue de aplicaciones en la nube",
+      "Administración de servidores cloud",
+      "Docker CI/CD",
+      "APIs REST",
+      "Hosting de aplicaciones"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios CK Soluciones",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización con n8n y Agentes de Inteligencia Artificial" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de Software con Inteligencia Artificial" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inteligencia Artificial Aplicada a Negocios" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Despliegue de Aplicaciones en la Nube" } }
+      ]
+    }
+  }
+];
+---
+<Base
+  title="CK Soluciones | Desarrollo con Inteligencia Artificial · Automatización con n8n · Colombia"
+  description="CK Soluciones: desarrollo con inteligencia artificial, automatización con n8n y agentes AI para empresas en Colombia. Software a medida, automatización de procesos y despliegue cloud. +20 años de experiencia."
+  canonical="https://cksoluciones.com/"
+  ogTitle="CK Soluciones | Desarrollo con IA y Automatización con n8n · Colombia"
+  ogDescription="Desarrollo con inteligencia artificial, automatización con n8n y agentes AI para empresas en Colombia. Software a medida y despliegue cloud."
+  page="home"
+>
+  <Fragment slot="head">
+    <meta name="keywords" content="desarrollo con inteligencia artificial, inteligencia artificial aplicada, desarrollo de software con inteligencia artificial, automatización con n8n, automatización con agentes de inteligencia artificial, automatización de procesos con AI, agentes AI para empresas, desarrollo con AI Colombia, software con inteligencia artificial, automatización empresarial Colombia, inteligencia artificial Colombia, n8n Colombia, agentes inteligentes, sistemas RAG, automatización de procesos empresariales, implementación de IA en negocios, desarrollo de software a medida, despliegue de aplicaciones en la nube, hosting cloud Colombia">
+    <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
+  </Fragment>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="relative min-h-screen flex items-center pt-16 overflow-hidden grid-bg">
+  <div class="blob blob-purple" aria-hidden="true"></div>
+  <div class="blob blob-blue"   aria-hidden="true"></div>
+  <div class="blob blob-cyan"   aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 relative z-10 w-full">
+    <div class="max-w-4xl">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 glass px-4 py-2 mb-8" style="border-radius:6px">
+        <span class="w-2 h-2 rounded-full animate-pulse" style="background:#cbfffc"></span>
+        <span class="text-sm font-medium" style="color:#edfffe; letter-spacing:0.04em">Automatización · AI · Software · Despliegue Cloud</span>
+      </div>
+
+      <!-- H1 -->
+      <h1 class="text-4xl sm:text-5xl lg:text-7xl leading-tight mb-6">
+        Automatiza tu empresa<br>con <span class="gradient-text">Inteligencia Artificial</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg sm:text-xl max-w-2xl mb-10 leading-relaxed" style="color:#bbc7c6">
+        Diseñamos e implementamos <strong class="text-white font-medium">agentes AI, flujos automatizados y software a medida</strong>
+        que eliminan cuellos de botella, reducen costos y escalan tu operación.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://wa.me/573145678786?text=Hola%2C%20me%20interesa%20conocer%20los%20servicios%20de%20CK%20Soluciones"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-wa text-white font-semibold px-8 py-4 rounded-xl flex items-center justify-center gap-3 text-base">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Habla con nosotros por WhatsApp
+        </a>
+        <a href="#servicios" class="btn-ghost font-semibold px-8 py-4 rounded-xl flex items-center justify-center gap-2 text-base">
+          Ver servicios
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/portfolio" class="btn-ghost font-semibold px-8 py-4 rounded-xl flex items-center justify-center gap-2 text-base">
+          Ver portfolio
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-wrap gap-10 mt-16">
+        <div>
+          <div class="text-3xl stat-glow">+20</div>
+          <div class="text-sm mt-1" style="color:#bbc7c6">Años de experiencia</div>
+        </div>
+        <div class="w-px self-stretch hidden sm:block" style="background:rgba(0,130,124,0.2)"></div>
+        <div>
+          <div class="text-3xl stat-glow">100%</div>
+          <div class="text-sm mt-1" style="color:#bbc7c6">Orientado a resultados</div>
+        </div>
+        <div class="w-px self-stretch hidden sm:block" style="background:rgba(0,130,124,0.2)"></div>
+        <div>
+          <div class="text-3xl stat-glow">Real</div>
+          <div class="text-sm mt-1" style="color:#bbc7c6">AI en producción</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ PROBLEMAS ══════════════════════════ -->
+<section class="py-24" aria-labelledby="problemas-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">El problema</p>
+      <h2 id="problemas-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        ¿Tu empresa sigue operando<br class="hidden sm:block"> en modo <span class="gradient-text">manual</span>?
+      </h2>
+      <p class="max-w-xl mx-auto text-lg" style="color:#bbc7c6">
+        Procesos repetitivos, herramientas desconectadas y alta dependencia humana frenan el crecimiento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="glass card-hover p-6 flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-1">Retrasos en atención al cliente</h3>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">Respuestas lentas que frustran clientes y pierden oportunidades.</p>
+        </div>
+      </div>
+
+      <div class="glass card-hover p-6 flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-1">Procesos repetitivos y costosos</h3>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">Tareas manuales que consumen horas y generan errores humanos.</p>
+        </div>
+      </div>
+
+      <div class="glass card-hover p-6 flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-1">Sistemas desconectados</h3>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">Información dispersa entre plataformas que no se comunican.</p>
+        </div>
+      </div>
+
+      <div class="glass card-hover p-6 flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-1">Dificultad para escalar</h3>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">Operaciones que dependen de personas clave y no crecen sin más contrataciones.</p>
+        </div>
+      </div>
+
+      <div class="glass card-hover p-6 flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-1">Baja trazabilidad</h3>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">Sin registros claros de comunicaciones y decisiones.</p>
+        </div>
+      </div>
+
+      <div class="glass card-hover p-6 flex gap-4" style="border-color:rgba(0,130,124,0.3);background:rgba(0,55,52,0.6)">
+        <div class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center icon-ai">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-1">La solución existe</h3>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">Automatización + AI elimina estos cuellos de botella de forma práctica y medible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ SERVICIOS ══════════════════════════ -->
+<section id="servicios" class="py-24" aria-labelledby="servicios-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">Servicios</p>
+      <h2 id="servicios-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        Desarrollo con IA y <span class="gradient-text">Automatización</span> para tu empresa
+      </h2>
+      <p class="max-w-xl mx-auto text-lg" style="color:#bbc7c6">
+        No soluciones aisladas — integramos automatización, inteligencia artificial e infraestructura en un ecosistema completo.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" style="background:rgba(0,130,124,0.06)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-ai flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#cbfffc;background:rgba(0,130,124,0.15);letter-spacing:0.06em">n8n · AI</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">Automatización con n8n y Agentes AI</h3>
+        <p class="leading-relaxed mb-6" style="color:#bbc7c6">Diseño e implementación de flujos automatizados con n8n y agentes de inteligencia artificial que conectan tus sistemas y eliminan tareas manuales.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Automatización de procesos internos</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Integración entre APIs y plataformas</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Automatización de correos y respuestas</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Agentes AI para atención y procesamiento</li>
+        </ul>
+      </article>
+
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" style="background:rgba(0,55,52,0.4)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-soft flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#bbc7c6;background:rgba(0,55,52,0.5);letter-spacing:0.06em">SaaS · Plataformas</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">Desarrollo de Software con Inteligencia Artificial</h3>
+        <p class="leading-relaxed mb-6" style="color:#bbc7c6">Construcción de plataformas y aplicaciones con IA integrada, arquitectura escalable y metodología ágil orientada a resultados.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Sistemas tipo SaaS</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Plataformas internas empresariales</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Sistemas de gestión (PQR, CRM, operaciones)</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Arquitectura escalable · Metodología ágil</li>
+        </ul>
+      </article>
+
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" style="background:rgba(0,130,124,0.06)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-ai flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#cbfffc;background:rgba(0,130,124,0.15);letter-spacing:0.06em">RAG · LLMs · Agentes</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">Inteligencia Artificial Aplicada</h3>
+        <p class="leading-relaxed mb-6" style="color:#bbc7c6">Implementación real de AI en procesos de negocio. No experimentos — soluciones en producción que generan valor medible.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Sistemas RAG (bases de conocimiento)</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Clasificación automática de solicitudes</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Asistentes internos empresariales</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Integración con Claude, OpenAI, Bedrock</li>
+        </ul>
+      </article>
+
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" style="background:rgba(0,55,52,0.4)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-soft flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#bbc7c6;background:rgba(0,55,52,0.5);letter-spacing:0.06em">Docker · Cloud · CI/CD</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">Despliegue de Aplicaciones en la Nube</h3>
+        <p class="leading-relaxed mb-6" style="color:#bbc7c6">Desplegamos y administramos tus aplicaciones en servidores cloud propios y en plataformas como DigitalOcean y AWS. Infraestructura robusta, segura y siempre disponible.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Despliegue de aplicaciones en la nube</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Administración de servidores Linux (VPS)</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Contenerización con Docker y Nginx</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Integración continua y entrega continua (CI/CD)</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CASOS DE USO ══════════════════════════ -->
+<section id="casos" class="py-24" aria-labelledby="casos-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">Casos de uso</p>
+      <h2 id="casos-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        Soluciones que ya <span class="gradient-text">operan en producción</span>
+      </h2>
+      <p class="max-w-xl mx-auto text-lg" style="color:#bbc7c6">
+        Ejemplos reales de cómo implementamos automatización e IA en operaciones empresariales.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <article class="glass card-hover p-6">
+        <div class="w-10 h-10 rounded-lg icon-ai flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z"/></svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Sistema PQR automatizado con AI</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:#bbc7c6">Recepción, clasificación y respuesta automática de peticiones, quejas y reclamos mediante correo y plataforma web.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-ai">AI</span>
+          <span class="badge badge-auto">n8n</span>
+        </div>
+      </article>
+
+      <article class="glass card-hover p-6">
+        <div class="w-10 h-10 rounded-lg icon-soft flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Automatización de atención al cliente</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:#bbc7c6">Procesamiento de emails, generación inteligente de respuestas y seguimiento automático de conversaciones.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-auto">Email AI</span>
+          <span class="badge badge-ai">LLM</span>
+        </div>
+      </article>
+
+      <article class="glass card-hover p-6">
+        <div class="w-10 h-10 rounded-lg icon-soft flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Integración de sistemas empresariales</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:#bbc7c6">Conexión entre CRM, correo, plataformas internas y APIs externas para flujo de datos en tiempo real.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-software">APIs REST</span>
+          <span class="badge badge-software">CRM</span>
+        </div>
+      </article>
+
+      <article class="glass card-hover p-6">
+        <div class="w-10 h-10 rounded-lg icon-soft flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Plataformas para propiedad horizontal</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:#bbc7c6">Gestión de residentes, comunicaciones, solicitudes y administración centralizada para conjuntos residenciales.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-software">SaaS</span>
+          <span class="badge badge-software">Portal web</span>
+        </div>
+      </article>
+
+      <article class="glass card-hover p-6 sm:col-span-2 lg:col-span-1">
+        <div class="w-10 h-10 rounded-lg icon-soft flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3 class="font-semibold text-white mb-2">Dashboards y analítica</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:#bbc7c6">Centralización de datos de marketing y operaciones en paneles accionables con métricas en tiempo real.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-software">Analytics</span>
+          <span class="badge badge-software">Data</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Backlink → Portfolio -->
+    <div class="text-center mt-12">
+      <a href="/portfolio" class="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-white" style="color:#cbfffc">
+        Ver proyectos reales en nuestro portfolio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ PROCESO ══════════════════════════ -->
+<section id="proceso" class="py-24" aria-labelledby="proceso-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">Metodología</p>
+      <h2 id="proceso-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        Cómo <span class="gradient-text">trabajamos</span>
+      </h2>
+      <p class="max-w-xl mx-auto text-lg" style="color:#bbc7c6">
+        Un proceso iterativo orientado a resultados, desde el diagnóstico hasta el soporte continuo.
+      </p>
+    </div>
+
+    <ol class="max-w-2xl mx-auto space-y-4" role="list">
+      {[
+        ['Diagnóstico del problema',           'Analizamos tu operación, identificamos cuellos de botella y definimos el impacto real de automatizar.'],
+        ['Diseño de solución',                 'Proponemos una arquitectura clara con tecnologías probadas y un plan de entrega concreto.'],
+        ['Desarrollo iterativo',               'Construimos en ciclos cortos con entregas frecuentes. Ves el avance desde la primera semana.'],
+        ['Integración con sistemas existentes','Conectamos la solución con tus herramientas actuales sin interrumpir la operación.'],
+        ['Despliegue en producción',           'Llevamos la solución a producción con infraestructura robusta, monitoreo y cero tiempo de inactividad.'],
+        ['Soporte y mejora continua',          'No desaparecemos tras el despliegue. Monitoreamos, mejoramos y evolucionamos la solución contigo.'],
+      ].map(([titulo, desc], i) => (
+        <li class="glass card-hover p-6 flex gap-5">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl btn-grad flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">{i + 1}</div>
+          <div>
+            <h3 class="font-semibold text-white mb-1">{titulo}</h3>
+            <p class="text-sm leading-relaxed" style="color:#bbc7c6">{desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════════ STACK ══════════════════════════ -->
+<section id="stack" class="py-24" aria-labelledby="stack-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="section-label mb-3">Stack tecnológico</p>
+      <h2 id="stack-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        Tecnologías <span class="gradient-text">probadas en producción</span>
+      </h2>
+      <p class="max-w-xl mx-auto text-lg" style="color:#bbc7c6">
+        No experimentamos con tu negocio. Usamos herramientas maduras con track record real.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>n8n</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>APIs REST</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Docker</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>PostgreSQL</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Nginx</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>AWS</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>DigitalOcean</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>Claude AI</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>OpenAI</span>
+      <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>AWS Bedrock</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CTA CONTACTO ══════════════════════════ -->
+<section id="contacto" class="py-24 relative overflow-hidden" aria-labelledby="contacto-h2">
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+    <div class="w-[700px] h-[400px] rounded-full blur-3xl" style="background:rgba(0,130,124,0.07)"></div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <div class="glass p-10 sm:p-16 rounded-2xl" style="border-color:rgba(0,130,124,0.3)">
+      <p class="section-label mb-4">Hablemos</p>
+      <h2 id="contacto-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-6">
+        ¿Listo para <span class="gradient-text">automatizar</span><br class="hidden sm:block"> tu negocio?
+      </h2>
+      <p class="text-lg max-w-xl mx-auto mb-10 leading-relaxed" style="color:#bbc7c6">
+        Cuéntanos tu caso. Analizamos tu operación y te proponemos una solución concreta con AI y automatización.
+      </p>
+
+      <a href="https://wa.me/573145678786?text=Hola%2C%20me%20interesa%20conocer%20los%20servicios%20de%20CK%20Soluciones"
+         target="_blank" rel="noopener noreferrer"
+         class="btn-wa text-white font-semibold px-10 py-5 rounded-xl inline-flex items-center gap-3 text-lg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+
+      <p class="text-sm mt-6" style="color:#707777">Respondemos en menos de 24 horas · Sin compromiso</p>
+    </div>
+  </div>
+</section>
+
+</Base>

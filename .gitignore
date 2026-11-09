@@ -1,2 +1,7 @@
 .claude/
 CLAUDE.md
+node_modules/
+dist/
+.astro/
+.DS_Store
+package-lock.json

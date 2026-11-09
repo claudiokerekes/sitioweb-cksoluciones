@@ -1,0 +1,467 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  page?: 'home' | 'portfolio';
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage = 'https://cksoluciones.com/og-image.png',
+  page = 'home',
+} = Astro.props;
+
+const resolvedOgTitle = ogTitle ?? title;
+const resolvedOgDesc  = ogDescription ?? description;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+
+  <!-- SEO -->
+  <meta name="description" content={description}>
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CK Soluciones">
+  <link rel="canonical" href={canonical}>
+
+  <!-- Geo -->
+  <meta name="geo.region" content="CO">
+  <meta name="geo.placename" content="Colombia">
+
+  <!-- AI crawlers (ChatGPT, Claude, Perplexity) -->
+  <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://cksoluciones.com/llms.txt">
+
+  <!-- Google Analytics -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DFQ080GJN2"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DFQ080GJN2');
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content={resolvedOgTitle}>
+  <meta property="og:description" content={resolvedOgDesc}>
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content={canonical}>
+  <meta property="og:locale"      content="es_CO">
+  <meta property="og:image"       content={ogImage}>
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content={resolvedOgTitle}>
+  <meta name="twitter:description" content={resolvedOgDesc}>
+  <meta name="twitter:image"       content={ogImage}>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script is:inline src="https://cdn.tailwindcss.com"></script>
+  <script is:inline>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body:    ['DM Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Page-specific head (JSON-LD, extra meta) -->
+  <slot name="head" />
+
+  <style is:global>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    /* ── Auros: Abyssal Terminal ── */
+    :root {
+      --abyss:   #012624;
+      --deep:    #011d1c;
+      --kelp:    #003734;
+      --mist:    #edfffe;
+      --silver:  #bbc7c6;
+      --phosphor:#fde9ff;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--abyss);
+      color: var(--silver);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    /* ── Surfaces ── */
+    .glass {
+      background: var(--kelp);
+      border: 1px solid rgba(0,130,124,0.18);
+      border-radius: 16px;
+    }
+    .glass-nav {
+      background: rgba(1,29,28,0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,130,124,0.14);
+    }
+
+    /* ── Typography ── */
+    .gradient-text {
+      background: linear-gradient(90deg, rgb(0,130,124) 0%, rgb(203,255,252) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-glow { color: var(--phosphor); font-weight: 500; }
+
+    /* ── Bioluminescent orbs ── */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.18;
+      pointer-events: none;
+      animation: blob-float 16s ease-in-out infinite;
+    }
+    .blob-purple { width: 700px; height: 700px; background: #00827c; top: -200px; left: -220px; animation-delay: 0s; }
+    .blob-blue   { width: 500px; height: 500px; background: #005c58; top: 60px;   right: -160px; animation-delay: -6s; }
+    .blob-cyan   { width: 440px; height: 440px; background: #cbfffc; bottom: -80px; left: 38%; opacity: 0.09; animation-delay: -11s; }
+
+    @keyframes blob-float {
+      0%,100% { transform: translate(0,0) scale(1); }
+      33%     { transform: translate(28px,-28px) scale(1.05); }
+      66%     { transform: translate(-20px,20px) scale(0.96); }
+    }
+
+    /* ── Grid ── */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0,130,124,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,130,124,0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    /* ── Cards ── */
+    .card-hover { transition: transform 0.2s ease, border-color 0.25s ease; }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0,130,124,0.45);
+    }
+
+    /* ── Buttons ── */
+    .btn-wa {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
+    }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.3); }
+
+    .btn-grad {
+      background: var(--kelp);
+      border: 1px solid rgba(0,130,124,0.3);
+      transition: border-color 0.15s ease;
+    }
+    .btn-grad:hover { border-color: rgba(0,130,124,0.6); }
+
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--silver);
+      transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(0,130,124,0.45);
+      background: rgba(0,55,52,0.5);
+      color: var(--mist);
+    }
+
+    /* ── Tech badge ── */
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(0,55,52,0.5);
+      border: 1px solid rgba(0,130,124,0.18);
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--silver);
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+    .tech-badge:hover {
+      border-color: rgba(0,130,124,0.45);
+      background: rgba(0,55,52,0.8);
+      color: var(--mist);
+    }
+
+    /* ── Dot / section label ── */
+    .dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00827c, #cbfffc);
+      flex-shrink: 0;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    /* ── Portfolio: filter tabs ── */
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(0,130,124,0.2);
+      color: var(--silver);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .filter-btn:hover {
+      border-color: rgba(0,130,124,0.5);
+      color: var(--mist);
+      background: rgba(0,55,52,0.4);
+    }
+    .filter-btn.active {
+      background: var(--kelp);
+      border-color: rgba(0,130,124,0.5);
+      color: var(--mist);
+    }
+
+    /* ── Portfolio: category badges ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .badge-ai       { background: rgba(0,130,124,0.2);   color: #cbfffc;         border: 1px solid rgba(0,130,124,0.35); }
+    .badge-auto     { background: rgba(0,55,52,0.5);     color: #edfffe;         border: 1px solid rgba(0,130,124,0.25); }
+    .badge-software { background: rgba(0,55,52,0.4);     color: var(--silver);   border: 1px solid rgba(187,199,198,0.2); }
+    .badge-cloud    { background: rgba(253,233,255,0.08); color: var(--phosphor); border: 1px solid rgba(253,233,255,0.2); }
+
+    /* ── Portfolio: status dots ── */
+    .status { display: inline-flex; align-items: center; font-size: 12px; gap: 6px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .status-prod { background: #4ADE80; box-shadow: 0 0 6px #4ADE80; animation: pulse-green 2s ease infinite; }
+    .status-demo { background: #FACC15; }
+    .status-dev  { background: #707777; }
+
+    @keyframes pulse-green {
+      0%,100% { opacity: 1; }
+      50%     { opacity: 0.5; }
+    }
+
+    /* ── Portfolio: tech chip + icon containers ── */
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      background: rgba(0,55,52,0.5);
+      border: 1px solid rgba(0,130,124,0.18);
+      color: var(--silver);
+    }
+    .icon-ai   { background: rgba(0,130,124,0.18); border: 1px solid rgba(0,130,124,0.3); }
+    .icon-soft { background: rgba(0,55,52,0.5);    border: 1px solid rgba(0,130,124,0.2); }
+
+    /* ── Portfolio: card filter ── */
+    .project-card { transition: opacity 0.2s ease, transform 0.2s ease; }
+    .project-card.hidden-card { display: none; }
+
+    html { scroll-behavior: smooth; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blob { animation: none; }
+      * { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAVBAR ══════════════════════════ -->
+<nav class="glass-nav fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Navegación principal">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5" aria-label="CK Soluciones - inicio">
+        <div class="w-8 h-8 rounded-lg btn-grad flex items-center justify-center flex-shrink-0">
+          <span class="text-white font-bold text-sm" style="font-family:'Space Grotesk',sans-serif">CK</span>
+        </div>
+        <span class="font-semibold text-white text-lg" style="font-family:'Space Grotesk',sans-serif">CK Soluciones</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/#servicios" class="text-slate-400 hover:text-white text-sm transition-colors duration-150">Servicios</a>
+        <a href="/#casos"     class="text-slate-400 hover:text-white text-sm transition-colors duration-150">Casos de uso</a>
+        <a href="/#proceso"   class="text-slate-400 hover:text-white text-sm transition-colors duration-150">Proceso</a>
+        <a href="/#stack"     class="text-slate-400 hover:text-white text-sm transition-colors duration-150">Stack</a>
+        <a href="/portfolio"  class={`text-sm transition-colors duration-150 ${page === 'portfolio' ? 'text-white font-semibold' : 'text-slate-400 hover:text-white'}`}>Portfolio</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <a href="/#contacto"
+         class="hidden md:flex btn-wa text-white text-sm font-semibold px-5 py-2.5 rounded-xl items-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Contáctanos
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden text-slate-400 hover:text-white p-2 rounded-lg"
+              onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden border-t px-4 pb-5" style="border-color:rgba(0,130,124,0.14)">
+    <div class="flex flex-col gap-4 pt-4">
+      <a href="/#servicios" class="text-sm hover:text-white transition-colors" style="color:#bbc7c6" onclick="toggleMenu()">Servicios</a>
+      <a href="/#casos"     class="text-sm hover:text-white transition-colors" style="color:#bbc7c6" onclick="toggleMenu()">Casos de uso</a>
+      <a href="/#proceso"   class="text-sm hover:text-white transition-colors" style="color:#bbc7c6" onclick="toggleMenu()">Proceso</a>
+      <a href="/#stack"     class="text-sm hover:text-white transition-colors" style="color:#bbc7c6" onclick="toggleMenu()">Stack</a>
+      <a href="/portfolio"  class="text-sm font-medium text-white"            onclick="toggleMenu()">Portfolio</a>
+      <a href="/#contacto" onclick="toggleMenu()"
+         class="btn-wa text-white text-sm font-semibold px-5 py-3 rounded-xl flex items-center justify-center gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Contáctanos
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ PAGE CONTENT ══ -->
+<slot />
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer style="border-top:1px solid rgba(0,130,124,0.12)" class="py-12" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg btn-grad flex items-center justify-center flex-shrink-0" aria-hidden="true">
+          <span class="text-white font-bold text-sm" style="font-family:'Space Grotesk',sans-serif">CK</span>
+        </div>
+        <div>
+          <div class="font-semibold text-white" style="font-family:'Space Grotesk',sans-serif">CK Soluciones</div>
+          <div class="text-xs" style="color:#707777">Automatización · Software · AI · Cloud</div>
+        </div>
+      </div>
+
+      <!-- Footer nav — backlinks entre páginas -->
+      <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer">
+        <a href="/#servicios" class="text-sm transition-colors hover:text-white" style="color:#bbc7c6">Servicios</a>
+        <a href="/#casos"     class="text-sm transition-colors hover:text-white" style="color:#bbc7c6">Casos de uso</a>
+        <a href="/#proceso"   class="text-sm transition-colors hover:text-white" style="color:#bbc7c6">Proceso</a>
+        <a href="/#stack"     class="text-sm transition-colors hover:text-white" style="color:#bbc7c6">Stack</a>
+        <a href="/#contacto"  class="text-sm transition-colors hover:text-white" style="color:#bbc7c6">Contacto</a>
+        <a href="/portfolio"  class="text-sm font-medium transition-colors hover:text-white" style="color:#cbfffc">Portfolio</a>
+      </nav>
+
+      <p class="text-sm" style="color:#707777">© 2025 CK Soluciones</p>
+    </div>
+  </div>
+</footer>
+
+<script is:inline>
+  function toggleMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var btn  = document.getElementById('menu-btn');
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Active nav on scroll (index page only)
+    var sections = document.querySelectorAll('section[id]');
+    if (sections.length) {
+      var navLinks = document.querySelectorAll('nav a[href^="/#"]');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function(link) {
+              var href = link.getAttribute('href');
+              var active = href === '/#' + entry.target.id;
+              link.classList.toggle('text-white',    active);
+              link.classList.toggle('text-slate-400', !active);
+            });
+          }
+        });
+      }, { threshold: 0.35 });
+      sections.forEach(function(s) { observer.observe(s); });
+    }
+
+    // GA: scroll depth
+    var scrollFired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round(window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100);
+      [{milestone:25,name:'scroll_25'},{milestone:50,name:'scroll_50'},{milestone:75,name:'scroll_75'}].forEach(function(s) {
+        if (!scrollFired[s.milestone] && pct >= s.milestone) {
+          scrollFired[s.milestone] = true;
+          if (typeof gtag !== 'undefined') gtag('event', s.name);
+        }
+      });
+    }, { passive: true });
+
+    // GA: WhatsApp click
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      link.addEventListener('click', function() { if (typeof gtag !== 'undefined') gtag('event', 'whatsapp_click'); });
+    });
+
+    // GA: nav click
+    document.querySelectorAll('nav a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        var href = this.getAttribute('href') || '';
+        var label = href.replace('/#','').replace('/','') || 'home';
+        if (label && typeof gtag !== 'undefined') gtag('event', 'navigation_click', { event_category: 'Nav', event_label: label });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

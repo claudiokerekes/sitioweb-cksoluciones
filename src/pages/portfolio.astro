@@ -1,0 +1,439 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Portfolio — CK Soluciones | Catálogo de Desarrollos"
+  description="Catálogo de proyectos desarrollados por CK Soluciones: agentes AI, software a medida, e-commerce y sitios web institucionales."
+  canonical="https://cksoluciones.com/portfolio"
+  ogTitle="Portfolio — CK Soluciones | Catálogo de Desarrollos"
+  ogDescription="Proyectos reales: agentes de IA, automatizaciones, software a medida y despliegues cloud. Cada uno resolvió un problema concreto."
+  page="portfolio"
+>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="relative pt-16 overflow-hidden grid-bg">
+  <div class="blob blob-purple" aria-hidden="true"></div>
+  <div class="blob blob-blue"   aria-hidden="true"></div>
+  <div class="blob blob-cyan"   aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+
+    <!-- Breadcrumb -->
+    <div class="flex items-center gap-2 text-sm mb-10" style="color:#707777">
+      <a href="/" class="transition-colors hover:text-white" style="color:#bbc7c6">CK Soluciones</a>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      <span style="color:#edfffe">Portfolio</span>
+    </div>
+
+    <div class="max-w-3xl">
+      <p class="section-label mb-4">Catálogo de Desarrollos</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        Lo que hemos<br><span class="gradient-text">construido</span>
+      </h1>
+      <p class="text-lg leading-relaxed max-w-2xl" style="color:#bbc7c6">
+        Proyectos reales: agentes de inteligencia artificial, software a medida y sitios web
+        con instrumentación completa. Cada uno resolvió un problema concreto.
+      </p>
+    </div>
+
+    <!-- Stats rápidos -->
+    <div class="flex flex-wrap gap-10 mt-14 pb-16" style="border-bottom:1px solid rgba(0,130,124,0.15)">
+      <div>
+        <div class="text-2xl stat-glow">7</div>
+        <div class="text-sm mt-1" style="color:#bbc7c6">Proyectos</div>
+      </div>
+      <div class="w-px self-stretch hidden sm:block" style="background:rgba(0,130,124,0.2)"></div>
+      <div>
+        <div class="text-2xl stat-glow">1</div>
+        <div class="text-sm mt-1" style="color:#bbc7c6">AI &amp; Agentes</div>
+      </div>
+      <div class="w-px self-stretch hidden sm:block" style="background:rgba(0,130,124,0.2)"></div>
+      <div>
+        <div class="text-2xl" style="color:#edfffe">6</div>
+        <div class="text-sm mt-1" style="color:#bbc7c6">Software a medida</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ CATÁLOGO ══════════════════════════ -->
+<section class="py-16" aria-labelledby="catalogo-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 id="catalogo-h2" class="sr-only">Catálogo de proyectos</h2>
+
+    <!-- Filtros -->
+    <div class="flex flex-wrap gap-3 mb-12" role="group" aria-label="Filtrar por categoría">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
+      <button class="filter-btn" onclick="filterProjects('ai', this)">🤖 AI &amp; Agentes</button>
+      <button class="filter-btn" onclick="filterProjects('software', this)">💻 Software</button>
+    </div>
+
+    <!-- Grid de proyectos -->
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- ─── 1 · Agente AI de Ventas — Javier Pereira Coffee ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="ai">
+
+        <!-- IMAGEN: public/assets/portfolio/agente-cafe.jpg (descomenta cuando tengas el archivo) -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/agente-cafe.jpg" alt="Agente AI de ventas Javier Pereira Coffee" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-ai">AI &amp; Agentes</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-prod"></span>
+            En producción
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-ai">☕</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">Agente AI de Ventas — Javier Pereira Coffee</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            Agente conversacional que atiende clientes en WhatsApp, explica el catálogo de
+            cafés por origen, proceso y tueste, y guía al comprador hasta cerrar la venta.
+            Conectado en tiempo real con la tienda para consultar disponibilidad.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">Claude API</span>
+          <span class="tech-chip">n8n</span>
+          <span class="tech-chip">WhatsApp API</span>
+          <span class="tech-chip">Webhooks</span>
+        </div>
+
+        <a href="https://javierpereira.coffee"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-ghost text-sm font-medium px-4 py-2.5 rounded-xl flex items-center justify-center gap-2" style="color:#bbc7c6">
+          Ver tienda
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </article>
+
+
+      <!-- ─── 2 · Jesús Followeres — App Devocional Infantil ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="software">
+
+        <!-- IMAGEN: public/assets/portfolio/jesus-followeres.jpg -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/jesus-followeres.jpg" alt="Jesús Followeres app devocional infantil" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-software">Software</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-prod"></span>
+            En producción
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-soft">✝️</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">Jesús Followeres — App Devocional Infantil</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            Aplicación web para niños hasta 9 años con contenido bíblico curado para
+            devocionales diarios. Interfaz colorida y amigable pensada para la edad, que
+            hace del tiempo con Dios algo divertido y accesible desde pequeños.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">Next.js</span>
+          <span class="tech-chip">Tailwind CSS</span>
+          <span class="tech-chip">Mobile-first</span>
+          <span class="tech-chip">Contenido curado</span>
+        </div>
+
+        <a href="https://jesusfolloweres.hechos29.co"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-ghost text-sm font-medium px-4 py-2.5 rounded-xl flex items-center justify-center gap-2" style="color:#bbc7c6">
+          Ver app
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </article>
+
+
+      <!-- ─── 3 · Plataforma CMS Devocional — Hechos 29 ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="software">
+
+        <!-- IMAGEN: public/assets/portfolio/cms-devocional.jpg -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/cms-devocional.jpg" alt="Plataforma CMS Devocional Hechos 29" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-software">Software</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-prod"></span>
+            En producción
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-soft">📱</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">Plataforma CMS Devocional — Hechos 29</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            Plataforma backend para crear, gestionar y distribuir contenido devocional.
+            Publica devocionales a múltiples apps consumidoras mediante API REST,
+            permitiendo escalar el contenido a distintas comunidades y servicios de terceros.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">API REST</span>
+          <span class="tech-chip">Node.js</span>
+          <span class="tech-chip">PostgreSQL</span>
+          <span class="tech-chip">Docker</span>
+        </div>
+
+      </article>
+
+
+      <!-- ─── 4 · Javier Pereira Coffee — Tienda Virtual ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="software">
+
+        <!-- IMAGEN: public/assets/portfolio/javier-pereira-coffee.jpg -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/javier-pereira-coffee.jpg" alt="Javier Pereira Coffee tienda virtual" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-software">Software</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-prod"></span>
+            En producción
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-soft">☕</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">Javier Pereira Coffee — Tienda Virtual</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            E-commerce completo para venta de café de especialidad colombiano. Backend
+            administrativo para gestión de productos, integración con Klaviyo para email
+            marketing, Google Analytics y Meta Pixel para seguimiento de conversiones.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">E-commerce</span>
+          <span class="tech-chip">Klaviyo</span>
+          <span class="tech-chip">GA4</span>
+          <span class="tech-chip">Meta Pixel</span>
+        </div>
+
+        <a href="https://javierpereira.coffee"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-ghost text-sm font-medium px-4 py-2.5 rounded-xl flex items-center justify-center gap-2" style="color:#bbc7c6">
+          Ver tienda
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </article>
+
+
+      <!-- ─── 5 · Hechos 29 — Sitio Web Institucional ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="software">
+
+        <!-- IMAGEN: public/assets/portfolio/hechos29.jpg -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/hechos29.jpg" alt="Hechos 29 sitio web institucional" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-software">Software</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-prod"></span>
+            En producción
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-soft">🕊️</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">Hechos 29 — Sitio Web Institucional</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            Sitio web institucional para la comunidad Hechos 29. Diseñado para conectar
+            la iglesia con su audiencia digital, con instrumentación completa de Google
+            Analytics para seguimiento de visitantes y comportamiento.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">Tailwind CSS</span>
+          <span class="tech-chip">GA4</span>
+          <span class="tech-chip">SEO</span>
+        </div>
+
+        <a href="https://hechos29.co"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-ghost text-sm font-medium px-4 py-2.5 rounded-xl flex items-center justify-center gap-2" style="color:#bbc7c6">
+          Ver sitio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </article>
+
+
+      <!-- ─── 6 · SellerPlus — Sitio Web ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="software">
+
+        <!-- IMAGEN: public/assets/portfolio/sellerplus.jpg -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/sellerplus.jpg" alt="SellerPlus sitio web" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-software">Software</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-prod"></span>
+            En producción
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-soft">📊</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">SellerPlus — Sitio Web</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            Sitio web institucional para SellerPlus. Incluye instrumentación con Google
+            Analytics para seguimiento de tráfico y análisis de comportamiento de visitantes.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">HTML</span>
+          <span class="tech-chip">Tailwind CSS</span>
+          <span class="tech-chip">GA4</span>
+          <span class="tech-chip">SEO</span>
+        </div>
+
+        <a href="https://sellerplus.co"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-ghost text-sm font-medium px-4 py-2.5 rounded-xl flex items-center justify-center gap-2" style="color:#bbc7c6">
+          Ver sitio
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </article>
+
+
+      <!-- ─── 7 · CK Workshop — Canciones y Presentaciones en Vivo ─── -->
+      <article class="project-card glass card-hover p-6 flex flex-col gap-5" data-category="software">
+
+        <!-- IMAGEN: public/assets/portfolio/ck-workshop.jpg -->
+        <!--
+        <div class="rounded-xl overflow-hidden -mx-6 -mt-6 mb-1" style="aspect-ratio:16/9;">
+          <img src="/assets/portfolio/ck-workshop.jpg" alt="CK Workshop gestión de canciones y presentaciones" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        -->
+
+        <div class="flex items-start justify-between gap-3">
+          <span class="badge badge-software">Software</span>
+          <span class="status" style="color:#bbc7c6">
+            <span class="status-dot status-dev"></span>
+            En desarrollo
+          </span>
+        </div>
+
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl icon-soft">🎵</div>
+
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold text-white mb-2">CK Workshop — Canciones y Presentaciones en Vivo</h2>
+          <p class="text-sm leading-relaxed" style="color:#bbc7c6">
+            Aplicación para iglesias y oradores que centraliza la gestión de canciones,
+            coordina presentaciones en múltiples pantallas simultáneas (auditorium y stage
+            view), y facilita la preparación completa de servicios desde un solo lugar.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-chip">Next.js</span>
+          <span class="tech-chip">WebSocket</span>
+          <span class="tech-chip">Multi-pantalla</span>
+          <span class="tech-chip">Real-time</span>
+        </div>
+
+      </article>
+
+    </div><!-- /projects-grid -->
+
+    <!-- Estado vacío -->
+    <div id="empty-state" class="hidden text-center py-24">
+      <div class="text-5xl mb-4" aria-hidden="true">🔍</div>
+      <p style="color:#bbc7c6">No hay proyectos en esta categoría aún.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ CTA FINAL ══════════════════════════ -->
+<section class="py-24 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5"
+       style="background:radial-gradient(ellipse 80% 60% at 50% 50%, #00827c, transparent)"
+       aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    <div class="glass max-w-3xl mx-auto p-10 sm:p-14">
+
+      <p class="section-label mb-4">¿Tienes un proyecto en mente?</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5">
+        Construyamos algo<br><span class="gradient-text">juntos</span>
+      </h2>
+      <p class="mb-8 leading-relaxed" style="color:#bbc7c6">
+        Cuéntanos tu idea o problema. Te damos una consulta gratuita para definir
+        cómo la tecnología puede resolverlo.
+      </p>
+
+      <a href="https://wa.me/573145678786?text=Hola%2C%20vi%20el%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto"
+         target="_blank" rel="noopener noreferrer"
+         class="btn-wa inline-flex text-white font-semibold px-8 py-4 rounded-xl items-center gap-3 text-base">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hablemos por WhatsApp
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<script is:inline>
+  function filterProjects(category, btnEl) {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btnEl.classList.add('active');
+
+    var cards   = document.querySelectorAll('.project-card');
+    var empty   = document.getElementById('empty-state');
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var match = category === 'all' || card.dataset.category === category;
+      card.classList.toggle('hidden-card', !match);
+      if (match) visible++;
+    });
+
+    if (empty) empty.classList.toggle('hidden', visible > 0);
+  }
+</script>
+
+</Base>
