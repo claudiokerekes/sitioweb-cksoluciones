@@ -306,11 +306,12 @@ const resolvedOgDesc  = ogDescription ?? description;
 <!-- ══════════════════════════ NAVBAR ══════════════════════════ -->
 <nav class="glass-nav fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Navegación principal">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
+    <div class="flex items-center justify-between py-3">
 
       <!-- Logo -->
       <a href="/" class="flex items-center" aria-label="CK Soluciones - inicio">
-        <img src="/logo_cksoluciones.png" alt="CK Soluciones" height="34" style="height:34px;width:auto;display:block">
+        <img src="/logo_cksoluciones.png" alt="CK Soluciones"
+             class="md:h-[120px] h-[75px] w-auto block">
       </a>
 
       <!-- Desktop links -->
@@ -396,7 +397,7 @@ const resolvedOgDesc  = ogDescription ?? description;
     // Active nav on scroll (index page only)
     var sections = document.querySelectorAll('section[id]');
     if (sections.length) {
-      var navLinks = document.querySelectorAll('nav a[href^="/#"]');
+      var navLinks = document.querySelectorAll('nav a[href^="/#"]:not(.btn-wa)');
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
