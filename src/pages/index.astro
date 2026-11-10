@@ -31,6 +31,42 @@ const schemas = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es un agente de inteligencia artificial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Un agente de inteligencia artificial es un programa que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma para cumplir un objetivo. A diferencia de un chatbot simple, un agente AI puede consultar bases de datos, llamar APIs, enviar mensajes y encadenar múltiples pasos sin intervención humana. En CK Soluciones construimos agentes AI conectados a WhatsApp, correo y sistemas internos para automatizar atención al cliente, ventas y procesos operativos." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es RAG y para qué sirve en un negocio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "RAG (Retrieval-Augmented Generation) es una técnica que combina un modelo de lenguaje como Claude o GPT con una base de conocimiento propia de tu empresa. En lugar de responder solo con lo que el modelo aprendió, el sistema primero busca información en tus documentos, manuales o base de datos, y luego genera una respuesta precisa y actualizada. Es ideal para asistentes internos, bots de soporte y sistemas que necesitan responder preguntas específicas sobre tu negocio." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es n8n y cómo automatiza procesos empresariales?",
+        "acceptedAnswer": { "@type": "Answer", "text": "n8n es una plataforma de automatización de flujos de trabajo de código abierto que conecta aplicaciones, APIs y servicios sin necesidad de programación compleja. Con n8n puedes automatizar el envío de correos, la sincronización de datos entre sistemas, la generación de reportes y la integración con herramientas como CRMs, WhatsApp y Google Sheets. CK Soluciones diseña e implementa flujos n8n en producción para empresas que quieren reducir tareas manuales y conectar sus herramientas." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué diferencia hay entre automatización tradicional y un agente AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "La automatización tradicional sigue reglas fijas: si pasa X, haz Y. Es predecible e ideal para procesos repetitivos y bien definidos. Un agente AI, en cambio, puede razonar, interpretar lenguaje natural, tomar decisiones en situaciones no previstas y actuar según contexto. En la práctica combinamos ambos: n8n para los flujos estructurados y agentes AI para las partes que requieren comprensión o decisiones inteligentes." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué empresas se benefician del desarrollo con inteligencia artificial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cualquier empresa con procesos repetitivos, comunicaciones con clientes o grandes volúmenes de información puede beneficiarse. Los casos más comunes son: e-commerce que quiere automatizar atención y seguimiento, empresas de servicios con alta demanda de soporte, organizaciones con gestión documental intensiva y pymes que quieren escalar sin contratar más personal. Implementamos soluciones prácticas para negocios de todos los tamaños en Colombia." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo toma implementar una solución con AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende de la complejidad. Un flujo de automatización con n8n puede estar en producción en 1 a 2 semanas. Un agente AI conectado a WhatsApp o correo toma entre 2 y 4 semanas. Una plataforma de software a medida con AI integrada puede tomar 1 a 3 meses según el alcance. Trabajamos con entregas iterativas: ves resultados desde la primera semana y ampliamos la solución de forma incremental." }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "CK Soluciones",
     "url": "https://cksoluciones.com",
@@ -467,6 +503,82 @@ const schemas = [
       <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>Claude AI</span>
       <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>OpenAI</span>
       <span class="tech-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bbc7c6" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>AWS Bedrock</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FAQ ══════════════════════════ -->
+<section id="faq" class="py-24" aria-labelledby="faq-h2">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <p class="section-label mb-3">Preguntas frecuentes</p>
+      <h2 id="faq-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        Todo lo que necesitás<br class="hidden sm:block"> saber sobre <span class="gradient-text">AI y automatización</span>
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+
+      <details class="glass group open:border-teal-500/30" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Qué es un agente de inteligencia artificial?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          Un agente de inteligencia artificial es un programa que percibe su entorno, toma decisiones y ejecuta acciones de forma autónoma para cumplir un objetivo. A diferencia de un chatbot simple, un agente AI puede consultar bases de datos, llamar APIs, enviar mensajes y encadenar múltiples pasos sin intervención humana. En CK Soluciones construimos agentes AI conectados a WhatsApp, correo y sistemas internos para automatizar atención al cliente, ventas y procesos operativos.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Qué es RAG y para qué sirve en un negocio?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          RAG (Retrieval-Augmented Generation) es una técnica que combina un modelo de lenguaje como Claude o GPT con una base de conocimiento propia de tu empresa. En lugar de responder solo con lo que el modelo aprendió, el sistema primero busca información en tus documentos, manuales o base de datos, y genera una respuesta precisa y actualizada. Es ideal para asistentes internos, bots de soporte y sistemas que necesitan responder preguntas específicas sobre tu negocio.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Qué es n8n y cómo automatiza procesos empresariales?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          n8n es una plataforma de automatización de flujos de trabajo de código abierto que conecta aplicaciones, APIs y servicios sin programación compleja. Con n8n podés automatizar el envío de correos, la sincronización de datos entre sistemas, la generación de reportes y la integración con herramientas como CRMs, WhatsApp y Google Sheets. CK Soluciones diseña e implementa flujos n8n en producción para empresas que quieren reducir tareas manuales y conectar sus herramientas.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Qué diferencia hay entre automatización y un agente AI?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          La automatización tradicional sigue reglas fijas: si pasa X, hace Y. Es predecible e ideal para procesos repetitivos y bien definidos. Un agente AI, en cambio, puede razonar, interpretar lenguaje natural, tomar decisiones en situaciones no previstas y actuar según contexto. En la práctica combinamos ambos: n8n para los flujos estructurados y agentes AI para las partes que requieren comprensión o decisiones inteligentes.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Qué empresas se benefician del desarrollo con inteligencia artificial?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          Cualquier empresa con procesos repetitivos, comunicaciones con clientes o grandes volúmenes de información puede beneficiarse. Los casos más comunes son: e-commerce que quiere automatizar atención y seguimiento, empresas de servicios con alta demanda de soporte, organizaciones con gestión documental intensiva y pymes que quieren escalar sin contratar más personal. Implementamos soluciones prácticas para negocios de todos los tamaños en Colombia.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Cuánto tiempo toma implementar una solución con AI?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          Depende de la complejidad. Un flujo de automatización con n8n puede estar en producción en 1 a 2 semanas. Un agente AI conectado a WhatsApp o correo toma entre 2 y 4 semanas. Una plataforma de software a medida con AI integrada puede tomar 1 a 3 meses según el alcance. Trabajamos con entregas iterativas: ves resultados desde la primera semana y ampliamos la solución de forma incremental.
+        </p>
+      </details>
+
     </div>
   </div>
 </section>
