@@ -12,34 +12,34 @@
         width: 1200px;
         height: 630px;
         overflow: hidden;
-        background-color: #030712;
+        background-color: #012624;
         font-family: 'DM Sans', sans-serif;
-        color: #F8FAFC;
+        color: #bbc7c6;
         position: relative;
     }
 
-    /* Grid overlay */
+    /* Grid overlay — teal tinted */
     .grid-bg {
         position: absolute;
         inset: 0;
         background-image:
-            linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+            linear-gradient(rgba(0,130,124,0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,130,124,0.06) 1px, transparent 1px);
         background-size: 64px 64px;
     }
 
-    /* Blobs */
+    /* Blobs bioluminescentes */
     .blob {
         position: absolute;
         border-radius: 50%;
         filter: blur(90px);
         pointer-events: none;
     }
-    .blob-purple { width: 520px; height: 520px; background: #7C3AED; opacity: 0.15; top: -180px; left: -120px; }
-    .blob-blue   { width: 400px; height: 400px; background: #2563EB; opacity: 0.12; top: 60px; right: -100px; }
-    .blob-cyan   { width: 300px; height: 300px; background: #06B6D4; opacity: 0.10; bottom: -60px; left: 42%; }
+    .blob-1 { width: 580px; height: 580px; background: #00827c; opacity: 0.18; top: -200px; left: -140px; }
+    .blob-2 { width: 420px; height: 420px; background: #005c58; opacity: 0.14; top: 80px; right: -120px; }
+    .blob-3 { width: 320px; height: 320px; background: #cbfffc; opacity: 0.07; bottom: -80px; left: 44%; }
 
-    /* Content */
+    /* Content layout */
     .content {
         position: relative;
         z-index: 10;
@@ -48,7 +48,7 @@
         display: flex;
         align-items: center;
         padding: 0 80px;
-        gap: 60px;
+        gap: 56px;
     }
 
     /* Left column */
@@ -56,7 +56,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 22px;
     }
 
     /* Logo */
@@ -69,32 +69,33 @@
         width: 44px;
         height: 44px;
         border-radius: 10px;
-        background: linear-gradient(135deg, #7C3AED, #3B82F6);
+        background: #003734;
+        border: 1px solid rgba(0,130,124,0.4);
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
         font-size: 16px;
-        color: white;
+        color: #cbfffc;
     }
     .logo-name {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 600;
         font-size: 22px;
-        color: white;
+        color: #edfffe;
     }
 
     /* Headline */
     .headline {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
-        font-size: 52px;
+        font-size: 54px;
         line-height: 1.1;
-        color: white;
+        color: #ffffff;
     }
     .gradient-text {
-        background: linear-gradient(135deg, #A855F7 0%, #3B82F6 50%, #06B6D4 100%);
+        background: linear-gradient(90deg, rgb(0,130,124) 0%, rgb(203,255,252) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -103,9 +104,13 @@
     /* Subtitle */
     .subtitle {
         font-size: 18px;
-        color: #94A3B8;
-        line-height: 1.5;
-        max-width: 480px;
+        color: #bbc7c6;
+        line-height: 1.55;
+        max-width: 500px;
+    }
+    .subtitle strong {
+        color: #edfffe;
+        font-weight: 500;
     }
 
     /* Badges */
@@ -116,39 +121,38 @@
     }
     .badge {
         padding: 7px 16px;
-        border-radius: 100px;
+        border-radius: 6px;
         font-size: 13px;
         font-weight: 600;
-        letter-spacing: 0.01em;
+        letter-spacing: 0.04em;
         border: 1px solid;
     }
-    .badge-purple { background: rgba(168,85,247,0.12); border-color: rgba(168,85,247,0.3); color: #C084FC; }
-    .badge-blue   { background: rgba(59,130,246,0.12); border-color: rgba(59,130,246,0.3); color: #60A5FA; }
-    .badge-cyan   { background: rgba(6,182,212,0.12);  border-color: rgba(6,182,212,0.3);  color: #22D3EE; }
-    .badge-green  { background: rgba(34,197,94,0.12);  border-color: rgba(34,197,94,0.3);  color: #4ADE80; }
+    .badge-ai     { background: rgba(0,130,124,0.2); border-color: rgba(0,130,124,0.4); color: #cbfffc; }
+    .badge-soft   { background: rgba(0,55,52,0.5);   border-color: rgba(0,130,124,0.25); color: #edfffe; }
+    .badge-stack  { background: rgba(0,55,52,0.4);   border-color: rgba(187,199,198,0.2); color: #bbc7c6; }
 
     /* Domain */
     .domain {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 15px;
-        color: #475569;
+        color: rgba(187,199,198,0.5);
         font-weight: 500;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.04em;
     }
 
-    /* Right column — stats card */
+    /* Right column — stat cards */
     .right {
-        width: 280px;
+        width: 272px;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
     }
     .stat-card {
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.08);
+        background: #003734;
+        border: 1px solid rgba(0,130,124,0.22);
         border-radius: 16px;
-        padding: 22px 24px;
+        padding: 20px 24px;
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -156,54 +160,50 @@
     .stat-value {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
-        font-size: 36px;
-        background: linear-gradient(135deg, #A855F7 0%, #3B82F6 50%, #06B6D4 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        font-size: 34px;
+        color: #fde9ff;
     }
     .stat-label {
         font-size: 13px;
-        color: #64748B;
+        color: #bbc7c6;
         font-weight: 500;
-    }
-    .stat-divider {
-        height: 1px;
-        background: rgba(255,255,255,0.06);
     }
 </style>
 </head>
 <body>
 
 <div class="grid-bg"></div>
-<div class="blob blob-purple"></div>
-<div class="blob blob-blue"></div>
-<div class="blob blob-cyan"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
 
 <div class="content">
 
     <div class="left">
+
         <div class="logo">
             <div class="logo-box">CK</div>
             <span class="logo-name">CK Soluciones</span>
         </div>
 
         <div class="headline">
-            Automatiza tu empresa<br>con <span class="gradient-text">Inteligencia Artificial</span>
+            Desarrollo con<br><span class="gradient-text">Inteligencia Artificial</span>
         </div>
 
         <div class="subtitle">
-            Agentes AI, flujos automatizados, software a medida<br>y despliegue de aplicaciones en la nube.
+            <strong>Agentes AI, automatización con n8n</strong> y software a medida<br>
+            para empresas. Soluciones reales en producción.
         </div>
 
         <div class="badges">
-            <span class="badge badge-purple">Automatización</span>
-            <span class="badge badge-cyan">Agentes AI</span>
-            <span class="badge badge-blue">Despliegue Cloud</span>
-            <span class="badge badge-green">n8n · Docker · AWS</span>
+            <span class="badge badge-ai">Agentes AI</span>
+            <span class="badge badge-ai">Desarrollo con IA</span>
+            <span class="badge badge-soft">Automatización n8n</span>
+            <span class="badge badge-stack">Claude · OpenAI · AWS</span>
         </div>
 
         <div class="domain">cksoluciones.com</div>
+
     </div>
 
     <div class="right">
@@ -211,28 +211,26 @@
             <div class="stat-value">+20</div>
             <div class="stat-label">Años de experiencia</div>
         </div>
-        <div class="stat-divider"></div>
         <div class="stat-card">
-            <div class="stat-value">100%</div>
-            <div class="stat-label">Orientado a resultados</div>
+            <div class="stat-value">7+</div>
+            <div class="stat-label">Proyectos en producción</div>
         </div>
-        <div class="stat-divider"></div>
         <div class="stat-card">
             <div class="stat-value">Real</div>
-            <div class="stat-label">AI en producción</div>
+            <div class="stat-label">AI aplicada a negocios</div>
         </div>
     </div>
 
 </div>
 
 <!--
-  INSTRUCCIONES PARA EXPORTAR:
+  CÓMO EXPORTAR og-image.png:
   1. Abre este archivo en Chrome
-  2. Abre DevTools (F12) → ícono de dispositivo (Toggle device toolbar)
-  3. Configura resolución: 1200 x 630
+  2. DevTools (F12) → ícono de dispositivo (Toggle device toolbar)
+  3. Resolución: 1200 × 630 — sin zoom (100%)
   4. Click derecho en la página → "Capture screenshot"
-  5. Guarda como og-image.png en la raíz del proyecto
-  6. Sube og-image.png al servidor (misma carpeta que index.html)
+  5. Guarda como og-image.png en /public/og-image.png
+  6. Haz commit y push — Cloudflare lo despliega automáticamente
 -->
 
 </body>
