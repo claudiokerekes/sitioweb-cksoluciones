@@ -72,21 +72,6 @@ const resolvedOgDesc  = ogDescription ?? description;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN -->
-  <script is:inline src="https://cdn.tailwindcss.com"></script>
-  <script is:inline>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['Space Grotesk', 'sans-serif'],
-            body:    ['DM Sans', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
   <!-- Page-specific head (JSON-LD, extra meta) -->
   <slot name="head" />
 

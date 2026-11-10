@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://cksoluciones.com',
   trailingSlash: 'never',
   build: { format: 'file' },
   integrations: [
+    tailwind(),
     sitemap({
       serialize(item) {
         return {
