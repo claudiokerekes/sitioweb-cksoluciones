@@ -32,6 +32,26 @@ n8n, Claude API, OpenAI GPT, AWS Bedrock, Next.js, Node.js, PostgreSQL, Docker, 
 - Portfolio: https://cksoluciones.com/portfolio
 - WhatsApp: https://wa.me/573145678786
 
+## Servicios Avanzados de AI
+
+### IA Privada en Servidores Propios
+CK Soluciones instala y configura modelos open-source (DeepSeek, Llama, Mistral, Qwen)
+en la infraestructura del cliente. Ningún dato sale hacia proveedores externos.
+Ideal para: empresas con datos sensibles, cumplimiento de privacidad, ahorro en costos por token.
+Stack: Ollama, llama.cpp, servidores Linux VPS, Docker.
+
+### Memoria Empresarial con RAG
+Conectamos modelos de AI con la documentación interna del cliente: manuales, contratos,
+base de clientes, procedimientos. El sistema busca fragmentos relevantes y genera respuestas
+precisas citadas en la fuente original — sin alucinaciones.
+Tecnologías: LlamaIndex, pgvector, embeddings semánticos, PostgreSQL.
+
+### Agentes AI Internos
+Agentes que gestionan procesos internos de extremo a extremo integrados con n8n.
+Casos de uso: clasificación de PQR, generación de reportes, aprobaciones automatizadas,
+escalado inteligente a humanos, integración con CRM y ERP.
+Stack: n8n, Claude API, OpenAI, Webhooks, APIs REST.
+
 ## Palabras clave relevantes
 
-desarrollo con inteligencia artificial, inteligencia artificial aplicada, automatización con n8n, automatización con agentes de inteligencia artificial, desarrollo de software con inteligencia artificial, agentes AI para empresas, automatización de procesos empresariales Colombia.
+desarrollo con inteligencia artificial, inteligencia artificial aplicada, automatización con n8n, automatización con agentes de inteligencia artificial, desarrollo de software con inteligencia artificial, agentes AI para empresas, automatización de procesos empresariales Colombia, IA privada para empresas, modelos AI privados, DeepSeek empresas, Llama empresarial, AI en servidor propio, RAG con documentos propios, memoria empresarial con AI, agentes AI internos, AI sin enviar datos a terceros.

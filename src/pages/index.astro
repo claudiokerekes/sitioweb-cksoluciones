@@ -62,6 +62,21 @@ const schemas = [
         "@type": "Question",
         "name": "¿Cuánto tiempo toma implementar una solución con AI?",
         "acceptedAnswer": { "@type": "Answer", "text": "Depende de la complejidad. Un flujo de automatización con n8n puede estar en producción en 1 a 2 semanas. Un agente AI conectado a WhatsApp o correo toma entre 2 y 4 semanas. Una plataforma de software a medida con AI integrada puede tomar 1 a 3 meses según el alcance. Trabajamos con entregas iterativas: ves resultados desde la primera semana y ampliamos la solución de forma incremental." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo tener un modelo de AI en mi propio servidor sin enviar datos a terceros?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Existen modelos open-source como DeepSeek, Llama y Mistral que se instalan en tu propio VPS o servidor dedicado. Toda la inferencia ocurre localmente — ningún prompt ni dato sale de tu infraestructura. CK Soluciones instala, configura y mantiene estos modelos en producción, con APIs compatibles con OpenAI para integración inmediata con tus sistemas existentes." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo puede la AI leer y recordar los documentos de mi empresa?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Mediante RAG (Retrieval-Augmented Generation). El proceso convierte tus documentos — PDFs, Word, Excel, bases de datos — en vectores semánticos almacenados en una base de datos como pgvector. Cuando alguien hace una pregunta, el sistema primero busca los fragmentos relevantes y los entrega al modelo para generar una respuesta precisa y citada. El resultado es una AI que conoce tu empresa sin necesidad de reentrenamiento." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué puede hacer un agente AI dentro de mi empresa?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Un agente AI interno puede recibir solicitudes por email, formulario o WhatsApp, clasificarlas por tipo y urgencia, buscar información en tus sistemas, generar respuestas o documentos, y escalar al humano correcto cuando no puede resolver solo. Integrado con n8n, puede actuar en más de 400 herramientas empresariales sin programación adicional. Es como contratar un empleado que trabaja 24/7, nunca olvida un procedimiento y registra todo automáticamente." }
       }
     ]
   },
@@ -133,7 +148,7 @@ const schemas = [
   page="home"
 >
   <Fragment slot="head">
-    <meta name="keywords" content="desarrollo con inteligencia artificial, inteligencia artificial aplicada, desarrollo de software con inteligencia artificial, automatización con n8n, automatización con agentes de inteligencia artificial, automatización de procesos con AI, agentes AI para empresas, desarrollo con AI Colombia, software con inteligencia artificial, automatización empresarial Colombia, inteligencia artificial Colombia, n8n Colombia, agentes inteligentes, sistemas RAG, automatización de procesos empresariales, implementación de IA en negocios, desarrollo de software a medida, despliegue de aplicaciones en la nube, hosting cloud Colombia">
+    <meta name="keywords" content="desarrollo con inteligencia artificial, inteligencia artificial aplicada, desarrollo de software con inteligencia artificial, automatización con n8n, automatización con agentes de inteligencia artificial, automatización de procesos con AI, agentes AI para empresas, desarrollo con AI Colombia, software con inteligencia artificial, automatización empresarial Colombia, inteligencia artificial Colombia, n8n Colombia, agentes inteligentes, sistemas RAG, automatización de procesos empresariales, implementación de IA en negocios, desarrollo de software a medida, despliegue de aplicaciones en la nube, hosting cloud Colombia, IA privada para empresas, modelos AI privados Colombia, DeepSeek empresas, Llama empresarial, AI en servidor propio, RAG con documentos propios, memoria empresarial con AI, agentes AI internos, automatizar procesos con agentes AI, AI sin enviar datos a terceros, Ollama Colombia, modelos open-source AI">
     <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
   </Fragment>
 
@@ -507,6 +522,76 @@ const schemas = [
   </div>
 </section>
 
+<!-- ══════════════════════════ AI AVANZADA ══════════════════════════ -->
+<section id="ai-avanzada" class="py-24" aria-labelledby="ai-avanzada-h2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">AI Avanzada</p>
+      <h2 id="ai-avanzada-h2" class="text-3xl sm:text-4xl lg:text-5xl mb-4">
+        AI que trabaja con <span class="gradient-text">tus datos, en tu empresa</span>
+      </h2>
+      <p class="max-w-xl mx-auto text-lg" style="color:#bbc7c6">
+        Más allá de los chatbots genéricos — implementamos AI que conoce tu negocio, protege tu información y automatiza tus procesos internos de extremo a extremo.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1: IA Privada -->
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl pointer-events-none -mr-10 -mt-10" style="background:rgba(0,130,124,0.07)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-ai flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#cbfffc;background:rgba(0,130,124,0.15);letter-spacing:0.06em">DeepSeek · Llama · Mistral</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">IA Privada en tus Servidores</h3>
+        <p class="leading-relaxed mb-5" style="color:#bbc7c6">Instalamos modelos open-source como DeepSeek, Llama y Mistral en tu propio servidor o VPS. Ningún dato sale de tu infraestructura — ideal para empresas con información sensible que necesitan privacidad total.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Control total de tus datos</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Sin costos por token · Sin límites de uso</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Funciona sin internet externo</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>API compatible con OpenAI</li>
+        </ul>
+      </article>
+
+      <!-- Card 2: RAG / Memoria Empresarial -->
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl pointer-events-none -mr-10 -mt-10" style="background:rgba(0,130,124,0.07)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-ai flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#cbfffc;background:rgba(0,130,124,0.15);letter-spacing:0.06em">RAG · Embeddings · pgvector</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">Memoria Empresarial con RAG</h3>
+        <p class="leading-relaxed mb-5" style="color:#bbc7c6">Conectamos la AI con tus documentos internos: manuales, contratos, base de clientes, procedimientos. La AI responde preguntas sobre tu negocio con información actualizada y precisa, citando la fuente.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Lee PDFs, Word, Excel y bases de datos</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Búsqueda semántica — entiende el contexto</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Respuestas citadas con fuente</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Actualización incremental sin reentrenamiento</li>
+        </ul>
+      </article>
+
+      <!-- Card 3: Agentes Internos -->
+      <article class="glass card-hover p-8 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl pointer-events-none -mr-10 -mt-10" style="background:rgba(0,130,124,0.07)" aria-hidden="true"></div>
+        <div class="w-12 h-12 rounded-xl icon-ai flex items-center justify-center mb-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cbfffc" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <span class="text-xs font-medium px-3 py-1 rounded-full" style="color:#cbfffc;background:rgba(0,130,124,0.15);letter-spacing:0.06em">n8n · Claude API · Webhooks</span>
+        <h3 class="text-xl font-semibold text-white mt-3 mb-3">Agentes AI para Procesos Internos</h3>
+        <p class="leading-relaxed mb-5" style="color:#bbc7c6">Agentes que gestionan flujos de trabajo de principio a fin: reciben solicitudes, clasifican, buscan información, generan documentos y escalan al humano correcto — integrados con n8n y tus herramientas actuales.</p>
+        <ul class="space-y-2" role="list">
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Clasificación automática de solicitudes</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Generación de reportes y documentos</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Integración con CRM, ERP y correo</li>
+          <li class="flex items-start gap-2.5 text-sm" style="color:#edfffe"><span class="dot mt-1.5"></span>Escalado inteligente a humanos</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════════════ FAQ ══════════════════════════ -->
 <section id="faq" class="py-24" aria-labelledby="faq-h2">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -576,6 +661,36 @@ const schemas = [
         </summary>
         <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
           Depende de la complejidad. Un flujo de automatización con n8n puede estar en producción en 1 a 2 semanas. Un agente AI conectado a WhatsApp o correo toma entre 2 y 4 semanas. Una plataforma de software a medida con AI integrada puede tomar 1 a 3 meses según el alcance. Trabajamos con entregas iterativas: ves resultados desde la primera semana y ampliamos la solución de forma incremental.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Puedo tener un modelo de AI en mi propio servidor sin enviar datos a terceros?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          Sí. Existen modelos open-source como DeepSeek, Llama y Mistral que se instalan en tu propio VPS o servidor dedicado. Toda la inferencia ocurre localmente — ningún prompt ni dato sale de tu infraestructura. CK Soluciones instala, configura y mantiene estos modelos en producción, con APIs compatibles con OpenAI para integración inmediata con tus sistemas existentes.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Cómo puede la AI leer y recordar los documentos de mi empresa?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          Mediante RAG (Retrieval-Augmented Generation). El proceso convierte tus documentos — PDFs, Word, Excel, bases de datos — en vectores semánticos almacenados en una base de datos como pgvector. Cuando alguien hace una pregunta, el sistema busca los fragmentos relevantes y los entrega al modelo para generar una respuesta precisa y citada. El resultado es una AI que conoce tu empresa sin necesidad de reentrenamiento.
+        </p>
+      </details>
+
+      <details class="glass group" style="border-radius:12px">
+        <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-white select-none">
+          ¿Qué puede hacer un agente AI dentro de mi empresa?
+          <svg class="flex-shrink-0 w-5 h-5 transition-transform group-open:rotate-180" style="color:#cbfffc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <p class="px-6 pb-6 text-sm leading-relaxed" style="color:#bbc7c6">
+          Un agente AI interno puede recibir solicitudes por email, formulario o WhatsApp, clasificarlas por tipo y urgencia, buscar información en tus sistemas, generar respuestas o documentos, y escalar al humano correcto cuando no puede resolver solo. Integrado con n8n, puede actuar en más de 400 herramientas empresariales sin programación adicional. Es como contratar un empleado que trabaja 24/7, nunca olvida un procedimiento y registra todo automáticamente.
         </p>
       </details>
 
